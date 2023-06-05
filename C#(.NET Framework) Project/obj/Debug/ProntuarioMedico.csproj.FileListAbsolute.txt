@@ -1,0 +1,24 @@
+C:\Users\Main\Desktop\Estudos C#\ProntuarioMedico\obj\Debug\ProntuarioMedico.csproj.AssemblyReference.cache
+C:\Users\Main\Desktop\Estudos C#\ProntuarioMedico\obj\Debug\ProntuarioMedico.csproj.SuggestedBindingRedirects.cache
+C:\Users\Main\Desktop\Estudos C#\ProntuarioMedico\obj\Debug\ProntuarioMedico.Properties.Resources.resources
+C:\Users\Main\Desktop\Estudos C#\ProntuarioMedico\obj\Debug\ProntuarioMedico.csproj.GenerateResource.cache
+C:\Users\Main\Desktop\Estudos C#\ProntuarioMedico\obj\Debug\ProntuarioMedico.csproj.CoreCompileInputs.cache
+C:\Users\Main\Desktop\Estudos C#\ProntuarioMedico\bin\Debug\ProntuarioMedico.exe.config
+C:\Users\Main\Desktop\Estudos C#\ProntuarioMedico\bin\Debug\ProntuarioMedico.exe
+C:\Users\Main\Desktop\Estudos C#\ProntuarioMedico\bin\Debug\ProntuarioMedico.pdb
+C:\Users\Main\Desktop\Estudos C#\ProntuarioMedico\obj\Debug\ProntuarioMedico.exe
+C:\Users\Main\Desktop\Estudos C#\ProntuarioMedico\obj\Debug\ProntuarioMedico.pdb
+C:\Users\Main\Desktop\Estudos C#\ProntuarioMedico\obj\Debug\ProntuarioMedico.FormPrincipal.resources
+C:\Users\Main\Desktop\Estudos C#\ProntuarioMedico\obj\Debug\ProntuarioMedico.HistoricoMedico.resources
+C:\Users\Main\Desktop\Estudos C#\Prontuario_Medico\C#(.NET Framework) Project\bin\Debug\ProntuarioMedico.exe.config
+C:\Users\Main\Desktop\Estudos C#\Prontuario_Medico\C#(.NET Framework) Project\bin\Debug\ProntuarioMedico.exe
+C:\Users\Main\Desktop\Estudos C#\Prontuario_Medico\C#(.NET Framework) Project\bin\Debug\ProntuarioMedico.pdb
+C:\Users\Main\Desktop\Estudos C#\Prontuario_Medico\C#(.NET Framework) Project\obj\Debug\ProntuarioMedico.csproj.AssemblyReference.cache
+C:\Users\Main\Desktop\Estudos C#\Prontuario_Medico\C#(.NET Framework) Project\obj\Debug\ProntuarioMedico.csproj.SuggestedBindingRedirects.cache
+C:\Users\Main\Desktop\Estudos C#\Prontuario_Medico\C#(.NET Framework) Project\obj\Debug\ProntuarioMedico.FormPrincipal.resources
+C:\Users\Main\Desktop\Estudos C#\Prontuario_Medico\C#(.NET Framework) Project\obj\Debug\ProntuarioMedico.HistoricoMedico.resources
+C:\Users\Main\Desktop\Estudos C#\Prontuario_Medico\C#(.NET Framework) Project\obj\Debug\ProntuarioMedico.Properties.Resources.resources
+C:\Users\Main\Desktop\Estudos C#\Prontuario_Medico\C#(.NET Framework) Project\obj\Debug\ProntuarioMedico.csproj.GenerateResource.cache
+C:\Users\Main\Desktop\Estudos C#\Prontuario_Medico\C#(.NET Framework) Project\obj\Debug\ProntuarioMedico.csproj.CoreCompileInputs.cache
+C:\Users\Main\Desktop\Estudos C#\Prontuario_Medico\C#(.NET Framework) Project\obj\Debug\ProntuarioMedico.exe
+C:\Users\Main\Desktop\Estudos C#\Prontuario_Medico\C#(.NET Framework) Project\obj\Debug\ProntuarioMedico.pdb

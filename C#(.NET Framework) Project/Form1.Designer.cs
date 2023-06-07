@@ -38,6 +38,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.closeFormPrincipal = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -167,13 +168,22 @@
             this.closeFormPrincipal.UseVisualStyleBackColor = false;
             this.closeFormPrincipal.Click += new System.EventHandler(this.closeFormPrincipal_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(204, 24);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(680, 538);
+            this.panel2.TabIndex = 10;
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
@@ -185,13 +195,14 @@
             this.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormPrincipal";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prontuário Médico";
             this.Activated += new System.EventHandler(this.FormPrincipal_Activated);
             this.Deactivate += new System.EventHandler(this.FormPrincipal_Deactivate);
+            this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.Enter += new System.EventHandler(this.FormPrincipal_Enter);
             this.Leave += new System.EventHandler(this.FormPrincipal_Leave);
             this.panel1.ResumeLayout(false);
@@ -213,6 +224,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button closeFormPrincipal;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

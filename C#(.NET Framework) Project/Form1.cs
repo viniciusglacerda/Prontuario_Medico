@@ -13,6 +13,8 @@ namespace ProntuarioMedico
     public partial class FormPrincipal : Form
     {
         private HistoricoMedico Historico;
+        private ExamesResultados Exames;
+
         private bool isDragging = false;
         private Point lastMousePosition;
 
@@ -22,6 +24,7 @@ namespace ProntuarioMedico
         {
             InitializeComponent();
             Historico = new HistoricoMedico();
+            Exames = new ExamesResultados();
             this.LocationChanged += FormPrincipal_LocationChanged;
         }
 
@@ -54,11 +57,18 @@ namespace ProntuarioMedico
 
         private void FormPrincipal_LocationChanged(object sender, EventArgs e)
         {
+            Point point = new Point(this.Location.X + 220, this.Location.Y + 40);
             if (Historico != null && !Historico.IsDisposed && Historico.Visible)
             {
-                // Atualiza a posição do Form2 para acompanhar a movimentação do Form1
-                Historico.Location = new Point(this.Location.X + 220, this.Location.Y + 40);
+                // Atualiza a posição do Historico para acompanhar a movimentação do Form1
+                Historico.Location = point;
                 Historico.BringToFront();
+            }
+            if (Exames != null && !Exames.IsDisposed && Exames.Visible)
+            {
+                // Atualiza a posição do form Exames para acompanhar a movimentação do Form1
+                Exames.Location = point;
+                Exames.BringToFront();
             }
         }
 
@@ -73,6 +83,17 @@ namespace ProntuarioMedico
             Historico.Show();
         }
 
+        private void showExames()
+        {
+            Exames.StartPosition = FormStartPosition.Manual;
+            Exames.Location = new Point(this.Location.X + 220, this.Location.Y + 40);
+            Exames.Size = new Size(this.Size.Width - 235, this.Size.Height - 55);
+            //Exames.TopMost = true;
+            Exames.BringToFront();
+            Exames.WindowState = this.WindowState;
+            Exames.Show();
+        }
+
         private bool isActionExecuted = false;
         private void FormPrincipal_Activated(object sender, EventArgs e)
         {
@@ -82,7 +103,22 @@ namespace ProntuarioMedico
         {
         }
 
-        private void selected(ShowForms func, Label label){
+        private void selected(string name, ShowForms func, Label label){
+            List<Form> listaFormularios = new List<Form>();
+
+            foreach (Form form in Application.OpenForms)
+            {
+                listaFormularios.Add(form);
+            }
+
+            foreach (Form form in listaFormularios)
+            {
+                if(name != form.Name && form.Name != this.Name)
+                {
+                    form.Hide();
+                }
+            }
+
             Label[] labels = { label1, label2, label3, label4, label5};
 
             foreach(Label lab in labels)
@@ -100,13 +136,13 @@ namespace ProntuarioMedico
         }
         private void label1_Click(object sender, EventArgs e)
         {
-            selected(showHistorico, label1);
+            selected(Historico.Name, showHistorico, label1);
             
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-            selected(Historico.Hide, label2);
+            selected(Exames.Name, showExames, label2);
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -124,6 +160,9 @@ namespace ProntuarioMedico
             
         }
 
-       
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+            label1_Click(sender, e);
+        }
     }
 }

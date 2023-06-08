@@ -14,6 +14,8 @@ namespace ProntuarioMedico
     {
         private HistoricoMedico Historico;
         private ExamesResultados Exames;
+        private Vacinas Vacinas;
+        private formAlergias Alergias;
 
         private bool isDragging = false;
         private Point lastMousePosition;
@@ -23,8 +25,12 @@ namespace ProntuarioMedico
         public FormPrincipal()
         {
             InitializeComponent();
+
             Historico = new HistoricoMedico();
             Exames = new ExamesResultados();
+            Vacinas = new Vacinas();
+            Alergias = new formAlergias();
+
             this.LocationChanged += FormPrincipal_LocationChanged;
         }
 
@@ -60,47 +66,34 @@ namespace ProntuarioMedico
             Point point = new Point(this.Location.X + 220, this.Location.Y + 40);
             if (Historico != null && !Historico.IsDisposed && Historico.Visible)
             {
-                // Atualiza a posição do Historico para acompanhar a movimentação do Form1
                 Historico.Location = point;
                 Historico.BringToFront();
             }
             if (Exames != null && !Exames.IsDisposed && Exames.Visible)
             {
-                // Atualiza a posição do form Exames para acompanhar a movimentação do Form1
                 Exames.Location = point;
                 Exames.BringToFront();
             }
+            if (Vacinas != null && !Vacinas.IsDisposed && Vacinas.Visible){
+                Vacinas.Location = point;
+                Vacinas.BringToFront();
+            }
+            if (Alergias != null && !Alergias.IsDisposed && Alergias.Visible)
+            {
+                Alergias.Location = point;
+                Alergias.BringToFront();
+            }
         }
-
-        private void showHistorico()
+        
+        private void showForms(Form form)
         {
-            Historico.StartPosition = FormStartPosition.Manual;
-            Historico.Location = new Point(this.Location.X+ 220, this.Location.Y+ 40);
-            Historico.Size = new Size(this.Size.Width-235, this.Size.Height-55);
+            form.StartPosition = FormStartPosition.Manual;
+            form.Location = new Point(this.Location.X + 220, this.Location.Y + 40);
+            form.Size = new Size(this.Size.Width - 235, this.Size.Height - 55);
             //Historico.TopMost = true;
-            Historico.BringToFront();
-            Historico.WindowState = this.WindowState;
-            Historico.Show();
-        }
-
-        private void showExames()
-        {
-            Exames.StartPosition = FormStartPosition.Manual;
-            Exames.Location = new Point(this.Location.X + 220, this.Location.Y + 40);
-            Exames.Size = new Size(this.Size.Width - 235, this.Size.Height - 55);
-            //Exames.TopMost = true;
-            Exames.BringToFront();
-            Exames.WindowState = this.WindowState;
-            Exames.Show();
-        }
-
-        private bool isActionExecuted = false;
-        private void FormPrincipal_Activated(object sender, EventArgs e)
-        {
-        }
-
-        private void FormPrincipal_Deactivate(object sender, EventArgs e)
-        {
+            form.BringToFront();
+            form.WindowState = this.WindowState;
+            form.Show();
         }
 
         private void selected(string name, ShowForms func, Label label){
@@ -119,7 +112,7 @@ namespace ProntuarioMedico
                 }
             }
 
-            Label[] labels = { label1, label2, label3, label4, label5};
+            Label[] labels = { LabelHistorico, LabelExames, LabelVacinas, LabelAlergia};
 
             foreach(Label lab in labels)
             {
@@ -134,15 +127,21 @@ namespace ProntuarioMedico
             }
             func();
         }
-        private void label1_Click(object sender, EventArgs e)
+        private void LabelHistorico_Click(object sender, EventArgs e)
         {
-            selected(Historico.Name, showHistorico, label1);
-            
+            selected(Historico.Name, ()=>showForms(Historico), LabelHistorico);
         }
-
-        private void label2_Click(object sender, EventArgs e)
+        private void LabelExames_Click(object sender, EventArgs e)
         {
-            selected(Exames.Name, showExames, label2);
+            selected(Exames.Name, ()=>showForms(Exames), LabelExames);
+        }
+        private void LabelVacinas_Click(object sender, EventArgs e)
+        {
+            selected(Vacinas.Name, ()=>showForms(Vacinas), LabelVacinas);
+        }
+        private void LabelAlergia_Click(object sender, EventArgs e)
+        {
+            selected(Alergias.Name, ()=>showForms(Alergias), LabelAlergia);
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -150,19 +149,8 @@ namespace ProntuarioMedico
 
         }
 
-        private void FormPrincipal_Leave(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void FormPrincipal_Enter(object sender, EventArgs e)
-        {
-            
-        }
-
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-            label1_Click(sender, e);
         }
     }
 }

@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alergias.cs" />
-    <Compile Include="ConsultaAnterior.cs" />
     <Compile Include="ExameResultado.cs" />
     <Compile Include="ExamesResultados.cs">
       <SubType>Form</SubType>
@@ -61,6 +60,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="formAlergias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formAlergias.Designer.cs">
+      <DependentUpon>formAlergias.cs</DependentUpon>
+    </Compile>
     <Compile Include="HistoricoMedico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,11 +78,20 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vacinacao.cs" />
+    <Compile Include="Vacinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vacinas.Designer.cs">
+      <DependentUpon>Vacinas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ExamesResultados.resx">
       <DependentUpon>ExamesResultados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formAlergias.resx">
+      <DependentUpon>formAlergias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HistoricoMedico.resx">
       <DependentUpon>HistoricoMedico.cs</DependentUpon>
@@ -91,6 +105,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vacinas.resx">
+      <DependentUpon>Vacinas.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

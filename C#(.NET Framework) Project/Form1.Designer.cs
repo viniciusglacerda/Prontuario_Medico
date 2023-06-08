@@ -28,106 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
+            this.LabelHistorico = new System.Windows.Forms.Label();
+            this.LabelExames = new System.Windows.Forms.Label();
+            this.LabelVacinas = new System.Windows.Forms.Label();
+            this.LabelAlergia = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.closeFormPrincipal = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BodyIntroducao = new System.Windows.Forms.RichTextBox();
+            this.Titulo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // LabelHistorico
             // 
-            this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(22, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Histórico Médico";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.LabelHistorico.AutoSize = true;
+            this.LabelHistorico.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LabelHistorico.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelHistorico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LabelHistorico.Location = new System.Drawing.Point(22, 47);
+            this.LabelHistorico.Name = "LabelHistorico";
+            this.LabelHistorico.Size = new System.Drawing.Size(126, 18);
+            this.LabelHistorico.TabIndex = 0;
+            this.LabelHistorico.Text = "Histórico Médico";
+            this.LabelHistorico.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelHistorico.Click += new System.EventHandler(this.LabelHistorico_Click);
             // 
-            // label2
+            // LabelExames
             // 
-            this.label2.AutoSize = true;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(22, 77);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 18);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Exames e Resultados";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.LabelExames.AutoSize = true;
+            this.LabelExames.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LabelExames.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelExames.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LabelExames.Location = new System.Drawing.Point(22, 82);
+            this.LabelExames.Name = "LabelExames";
+            this.LabelExames.Size = new System.Drawing.Size(160, 18);
+            this.LabelExames.TabIndex = 1;
+            this.LabelExames.Text = "Exames e Resultados";
+            this.LabelExames.Click += new System.EventHandler(this.LabelExames_Click);
             // 
-            // label3
+            // LabelVacinas
             // 
-            this.label3.AutoSize = true;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(22, 117);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 18);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Consultas Anteriores";
+            this.LabelVacinas.AutoSize = true;
+            this.LabelVacinas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LabelVacinas.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelVacinas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LabelVacinas.Location = new System.Drawing.Point(22, 117);
+            this.LabelVacinas.Name = "LabelVacinas";
+            this.LabelVacinas.Size = new System.Drawing.Size(82, 18);
+            this.LabelVacinas.TabIndex = 3;
+            this.LabelVacinas.Text = "Vacinação";
+            this.LabelVacinas.Click += new System.EventHandler(this.LabelVacinas_Click);
             // 
-            // label4
+            // LabelAlergia
             // 
-            this.label4.AutoSize = true;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(22, 156);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 18);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Vacinação";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(22, 194);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 18);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Alergias";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(22, 232);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 18);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Procedimentos";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(22, 270);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 18);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Prescrições";
+            this.LabelAlergia.AutoSize = true;
+            this.LabelAlergia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LabelAlergia.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelAlergia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LabelAlergia.Location = new System.Drawing.Point(22, 155);
+            this.LabelAlergia.Name = "LabelAlergia";
+            this.LabelAlergia.Size = new System.Drawing.Size(66, 18);
+            this.LabelAlergia.TabIndex = 7;
+            this.LabelAlergia.Text = "Alergias";
+            this.LabelAlergia.Click += new System.EventHandler(this.LabelAlergia_Click);
             // 
             // label8
             // 
@@ -171,10 +138,36 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.BodyIntroducao);
+            this.panel2.Controls.Add(this.Titulo);
             this.panel2.Location = new System.Drawing.Point(204, 24);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(680, 538);
             this.panel2.TabIndex = 10;
+            // 
+            // BodyIntroducao
+            // 
+            this.BodyIntroducao.BackColor = System.Drawing.Color.White;
+            this.BodyIntroducao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BodyIntroducao.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.BodyIntroducao.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BodyIntroducao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.BodyIntroducao.Location = new System.Drawing.Point(35, 90);
+            this.BodyIntroducao.Name = "BodyIntroducao";
+            this.BodyIntroducao.Size = new System.Drawing.Size(594, 270);
+            this.BodyIntroducao.TabIndex = 1;
+            this.BodyIntroducao.Text = resources.GetString("BodyIntroducao.Text");
+            // 
+            // Titulo
+            // 
+            this.Titulo.AutoSize = true;
+            this.Titulo.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
+            this.Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.Titulo.Location = new System.Drawing.Point(29, 43);
+            this.Titulo.Name = "Titulo";
+            this.Titulo.Size = new System.Drawing.Size(455, 32);
+            this.Titulo.TabIndex = 0;
+            this.Titulo.Text = "Bem-vindo ao Prontuário Médico!";
             // 
             // FormPrincipal
             // 
@@ -184,13 +177,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LabelAlergia);
+            this.Controls.Add(this.LabelVacinas);
+            this.Controls.Add(this.LabelExames);
+            this.Controls.Add(this.LabelHistorico);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -200,13 +190,11 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prontuário Médico";
-            this.Activated += new System.EventHandler(this.FormPrincipal_Activated);
-            this.Deactivate += new System.EventHandler(this.FormPrincipal_Deactivate);
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
-            this.Enter += new System.EventHandler(this.FormPrincipal_Enter);
-            this.Leave += new System.EventHandler(this.FormPrincipal_Leave);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,17 +202,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label LabelHistorico;
+        private System.Windows.Forms.Label LabelExames;
+        private System.Windows.Forms.Label LabelVacinas;
+        private System.Windows.Forms.Label LabelAlergia;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button closeFormPrincipal;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RichTextBox BodyIntroducao;
+        private System.Windows.Forms.Label Titulo;
     }
 }
 

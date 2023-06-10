@@ -30,17 +30,13 @@
         {
             this.Titulo = new System.Windows.Forms.Label();
             this.NomeVac = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.NomeVacina = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateVacina = new System.Windows.Forms.DateTimePicker();
             this.SaveVax = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Remover = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.viewVacinas = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.viewVacinas)).BeginInit();
             this.SuspendLayout();
             // 
             // Titulo
@@ -62,12 +58,12 @@
             this.NomeVac.TabIndex = 1;
             this.NomeVac.Text = "Nome da vacina:";
             // 
-            // textBox1
+            // NomeVacina
             // 
-            this.textBox1.Location = new System.Drawing.Point(18, 94);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(608, 25);
-            this.textBox1.TabIndex = 2;
+            this.NomeVacina.Location = new System.Drawing.Point(18, 94);
+            this.NomeVacina.Name = "NomeVacina";
+            this.NomeVacina.Size = new System.Drawing.Size(608, 25);
+            this.NomeVacina.TabIndex = 2;
             // 
             // label1
             // 
@@ -78,13 +74,14 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Nome da vacina:";
             // 
-            // dateTimePicker1
+            // dateVacina
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(18, 146);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(608, 25);
-            this.dateTimePicker1.TabIndex = 4;
+            this.dateVacina.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateVacina.Location = new System.Drawing.Point(18, 146);
+            this.dateVacina.Name = "dateVacina";
+            this.dateVacina.Size = new System.Drawing.Size(608, 25);
+            this.dateVacina.TabIndex = 4;
+            this.dateVacina.Value = new System.DateTime(2023, 6, 10, 0, 0, 0, 0);
             // 
             // SaveVax
             // 
@@ -100,6 +97,7 @@
             this.SaveVax.TabIndex = 5;
             this.SaveVax.Text = "Salvar vacina";
             this.SaveVax.UseVisualStyleBackColor = false;
+            this.SaveVax.Click += new System.EventHandler(this.SaveVax_Click);
             // 
             // label2
             // 
@@ -111,67 +109,25 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Vacinas Registradas:";
             // 
-            // label3
+            // viewVacinas
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 277);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 17);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Hepatite B";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(433, 277);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 17);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "12/05/2023";
-            // 
-            // Remover
-            // 
-            this.Remover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.Remover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Remover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Remover.ForeColor = System.Drawing.Color.White;
-            this.Remover.Location = new System.Drawing.Point(526, 272);
-            this.Remover.Name = "Remover";
-            this.Remover.Size = new System.Drawing.Size(100, 27);
-            this.Remover.TabIndex = 9;
-            this.Remover.Text = "Remover";
-            this.Remover.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(526, 307);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 27);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Remover";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(433, 312);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 17);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "12/05/2023";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 312);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 17);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Tríplice Viral";
+            this.viewVacinas.AllowUserToAddRows = false;
+            this.viewVacinas.AllowUserToDeleteRows = false;
+            this.viewVacinas.AllowUserToResizeColumns = false;
+            this.viewVacinas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.viewVacinas.BackgroundColor = System.Drawing.Color.White;
+            this.viewVacinas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.viewVacinas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.viewVacinas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.viewVacinas.ColumnHeadersVisible = false;
+            this.viewVacinas.Enabled = false;
+            this.viewVacinas.Location = new System.Drawing.Point(18, 264);
+            this.viewVacinas.Name = "viewVacinas";
+            this.viewVacinas.ReadOnly = true;
+            this.viewVacinas.RowHeadersVisible = false;
+            this.viewVacinas.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.viewVacinas.Size = new System.Drawing.Size(608, 222);
+            this.viewVacinas.TabIndex = 7;
             // 
             // Vacinas
             // 
@@ -181,29 +137,26 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(651, 500);
             this.ControlBox = false;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.Remover);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.viewVacinas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.SaveVax);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateVacina);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.NomeVacina);
             this.Controls.Add(this.NomeVac);
             this.Controls.Add(this.Titulo);
             this.Font = new System.Drawing.Font("Arial", 11.25F);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Vacinas";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Vacinas";
+            this.Load += new System.EventHandler(this.Vacinas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.viewVacinas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,16 +166,11 @@
 
         private System.Windows.Forms.Label Titulo;
         private System.Windows.Forms.Label NomeVac;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox NomeVacina;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateVacina;
         private System.Windows.Forms.Button SaveVax;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button Remover;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView viewVacinas;
     }
 }

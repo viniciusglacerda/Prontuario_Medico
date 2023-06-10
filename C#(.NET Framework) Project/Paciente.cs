@@ -10,8 +10,18 @@ namespace ProntuarioMedico
     {
         public string Nome { get; set; }
         public int Idade { get; set; }
-        public float Altura { get; set; }
-        public float Peso { get; set; }
+        public double Altura { get; set; }
+        public double Peso { get; set; }
         public string Historico { get; set; }
+
+        public Paciente()
+        {
+            Nome = string.Empty;
+            Idade = 0;
+            Altura = 0;
+            Peso = 0;
+            Historico = string.Empty;
+        }
+
     }
 }

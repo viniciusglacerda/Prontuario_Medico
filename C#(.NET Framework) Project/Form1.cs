@@ -12,30 +12,86 @@ namespace ProntuarioMedico
 {
     public partial class FormPrincipal : Form
     {
+        private string NomeArquivo = "prontuario.xml";
+
         private HistoricoMedico Historico;
         private ExamesResultados Exames;
         private Vacinas Vacinas;
         private formAlergias Alergias;
 
+        private Prontuario prontuario;
+
         private bool isDragging = false;
         private Point lastMousePosition;
 
         delegate void ShowForms();
+        delegate void Execute();
 
         public FormPrincipal()
         {
             InitializeComponent();
+            prontuario = new Prontuario();
+            prontuario.LerDeXML(NomeArquivo);
 
-            Historico = new HistoricoMedico();
+            Historico = new HistoricoMedico(
+                prontuario.HistoricoMedico.Nome,
+                prontuario.HistoricoMedico.Idade,
+                prontuario.HistoricoMedico.Altura,
+                prontuario.HistoricoMedico.Peso,
+                prontuario.HistoricoMedico.Historico
+            );
+
             Exames = new ExamesResultados();
+            ProcessarExames();
+
             Vacinas = new Vacinas();
+            ProcessarVacinas();
+
             Alergias = new formAlergias();
+            ProcessarAlergias();
 
             this.LocationChanged += FormPrincipal_LocationChanged;
         }
+        private void ProcessarExames()
+        {
+            foreach (var item in prontuario.ExamesResultados)
+            {
+                Exames.AddExames(
+                    item.Data,
+                    item.Exame,
+                    item.Resultado
+                );
+            }
+        }
+        private void ProcessarVacinas()
+        {
+            foreach (var item in prontuario.Vacinacoes)
+            {
+                Vacinas.AddVacinas(
+                    item.Nome,
+                    item.Data
+                );
+            }
+        }
+        private void ProcessarAlergias()
+        {
+            foreach (var item in prontuario.Alergias)
+            {
+                Alergias.AddAlergias(item._Alergias);
+            }
+        }
+        private void SalvarDados()
+        {
+            prontuario.HistoricoMedico = Historico.paciente;
+            prontuario.ExamesResultados = Exames.exameResultados;
+            prontuario.Vacinacoes = Vacinas.vacinas;
+            prontuario.Alergias = Alergias.alergias;
 
+            prontuario.SalvarXml(NomeArquivo);
+        }
         private void closeFormPrincipal_Click(object sender, EventArgs e)
         {
+            SalvarDados();
             this.Close();
             this.Dispose();
         }
@@ -90,7 +146,7 @@ namespace ProntuarioMedico
             form.StartPosition = FormStartPosition.Manual;
             form.Location = new Point(this.Location.X + 220, this.Location.Y + 40);
             form.Size = new Size(this.Size.Width - 235, this.Size.Height - 55);
-            //Historico.TopMost = true;
+            //form.TopMost = true;
             form.BringToFront();
             form.WindowState = this.WindowState;
             form.Show();
@@ -142,15 +198,6 @@ namespace ProntuarioMedico
         private void LabelAlergia_Click(object sender, EventArgs e)
         {
             selected(Alergias.Name, ()=>showForms(Alergias), LabelAlergia);
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormPrincipal_Load(object sender, EventArgs e)
-        {
         }
     }
 }

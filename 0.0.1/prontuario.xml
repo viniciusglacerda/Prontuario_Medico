@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Prontuario>
+  <HistoricoMedico>
+    <Nome></Nome>
+    <Idade>0</Idade>
+    <Altura>0</Altura>
+    <Peso>0</Peso>
+    <Historico></Historico>
+  </HistoricoMedico>
+</Prontuario>

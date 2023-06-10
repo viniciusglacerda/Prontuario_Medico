@@ -29,77 +29,32 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label4 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dateExames = new System.Windows.Forms.DateTimePicker();
+            this.registrarExames = new System.Windows.Forms.Button();
+            this.nomeExames = new System.Windows.Forms.TextBox();
+            this.resultadoExames = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.viewData = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.viewData)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(17, 194);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(612, 29);
-            this.panel1.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(342, 5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Resultado";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(157, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Exame";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Data";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(12, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(258, 29);
+            this.label4.Size = new System.Drawing.Size(297, 32);
             this.label4.TabIndex = 3;
             this.label4.Text = "Exames e Resultados";
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // label5
             // 
@@ -111,41 +66,43 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Registros:";
             // 
-            // dateTimePicker1
+            // dateExames
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(17, 78);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(117, 26);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dateExames.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateExames.Location = new System.Drawing.Point(17, 78);
+            this.dateExames.Name = "dateExames";
+            this.dateExames.Size = new System.Drawing.Size(117, 26);
+            this.dateExames.TabIndex = 5;
+            this.dateExames.Value = new System.DateTime(2023, 6, 7, 0, 0, 0, 0);
             // 
-            // button1
+            // registrarExames
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(156)))), ((int)(((byte)(180)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(17, 110);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 27);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Registrar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.registrarExames.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(156)))), ((int)(((byte)(180)))));
+            this.registrarExames.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.registrarExames.FlatAppearance.BorderSize = 0;
+            this.registrarExames.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registrarExames.ForeColor = System.Drawing.Color.White;
+            this.registrarExames.Location = new System.Drawing.Point(17, 110);
+            this.registrarExames.Name = "registrarExames";
+            this.registrarExames.Size = new System.Drawing.Size(84, 27);
+            this.registrarExames.TabIndex = 6;
+            this.registrarExames.Text = "Registrar";
+            this.registrarExames.UseVisualStyleBackColor = false;
+            this.registrarExames.Click += new System.EventHandler(this.registrarExames_Click);
             // 
-            // textBox1
+            // nomeExames
             // 
-            this.textBox1.Location = new System.Drawing.Point(178, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 26);
-            this.textBox1.TabIndex = 7;
+            this.nomeExames.Location = new System.Drawing.Point(178, 78);
+            this.nomeExames.Name = "nomeExames";
+            this.nomeExames.Size = new System.Drawing.Size(152, 26);
+            this.nomeExames.TabIndex = 7;
             // 
-            // textBox2
+            // resultadoExames
             // 
-            this.textBox2.Location = new System.Drawing.Point(363, 78);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(266, 26);
-            this.textBox2.TabIndex = 8;
+            this.resultadoExames.Location = new System.Drawing.Point(363, 78);
+            this.resultadoExames.Name = "resultadoExames";
+            this.resultadoExames.Size = new System.Drawing.Size(266, 26);
+            this.resultadoExames.TabIndex = 8;
             // 
             // label6
             // 
@@ -156,7 +113,6 @@
             this.label6.Size = new System.Drawing.Size(101, 16);
             this.label6.TabIndex = 9;
             this.label6.Text = "Data do Exame:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -178,6 +134,41 @@
             this.label8.TabIndex = 11;
             this.label8.Text = "Resultado do Exame:";
             // 
+            // viewData
+            // 
+            this.viewData.AllowUserToAddRows = false;
+            this.viewData.AllowUserToDeleteRows = false;
+            this.viewData.AllowUserToResizeColumns = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.NullValue = null;
+            this.viewData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.viewData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.viewData.BackgroundColor = System.Drawing.Color.White;
+            this.viewData.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.viewData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.viewData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.viewData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.viewData.ColumnHeadersHeight = 24;
+            this.viewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.viewData.Enabled = false;
+            this.viewData.Location = new System.Drawing.Point(16, 194);
+            this.viewData.Name = "viewData";
+            this.viewData.ReadOnly = true;
+            this.viewData.RowHeadersVisible = false;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewData.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.viewData.RowTemplate.ReadOnly = true;
+            this.viewData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.viewData.Size = new System.Drawing.Size(612, 269);
+            this.viewData.TabIndex = 12;
+            // 
             // ExamesResultados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -185,16 +176,16 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(651, 500);
+            this.Controls.Add(this.viewData);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.resultadoExames);
+            this.Controls.Add(this.nomeExames);
+            this.Controls.Add(this.registrarExames);
+            this.Controls.Add(this.dateExames);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -204,28 +195,24 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "ExamesResultados";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Load += new System.EventHandler(this.ExamesResultados_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.viewData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DateTimePicker dateExames;
+        private System.Windows.Forms.Button registrarExames;
+        private System.Windows.Forms.TextBox nomeExames;
+        private System.Windows.Forms.TextBox resultadoExames;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView viewData;
     }
 }

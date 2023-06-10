@@ -8,7 +8,7 @@ namespace ProntuarioMedico
 {
     public class Vacinacao
     {
-        public string NomeVacina { get; set; }
+        public string Nome { get; set; }
         public DateTime Data { get; set; }
     }
 }

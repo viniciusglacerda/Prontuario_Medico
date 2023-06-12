@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Prontuario>
+  <HistoricoMedico>
+    <Nome></Nome>
+    <Idade>0</Idade>
+    <Altura>0</Altura>
+    <Peso>0</Peso>
+    <Historico></Historico>
+  </HistoricoMedico>
+  <ExamesResultados>
+    <Exame>
+      <Data>2023-06-07T00:00:00</Data>
+      <Nome></Nome>
+      <Resultado></Resultado>
+    </Exame>
+    <Exame>
+      <Data>2023-06-07T00:00:00</Data>
+      <Nome></Nome>
+      <Resultado></Resultado>
+    </Exame>
+  </ExamesResultados>
+  <Vacinacoes>
+    <Vacina>
+      <Nome>fsdf</Nome>
+      <Data>2023-06-10T00:00:00</Data>
+    </Vacina>
+  </Vacinacoes>
+  <Alergias>
+    <Alergia>dfdd</Alergia>
+    <Alergia>dddd</Alergia>
+  </Alergias>
+</Prontuario>

@@ -31,6 +31,8 @@ namespace ProntuarioMedico
         }
         public void AtualizarDataGridView()
         {
+            vacinas = vacinas.OrderBy(p => p.Nome).ToList();
+
             this.viewVacinas.DataSource = null;
             this.viewVacinas.DataSource = vacinas;
             this.viewVacinas.ClearSelection();

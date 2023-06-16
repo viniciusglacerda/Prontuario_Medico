@@ -30,6 +30,8 @@ namespace ProntuarioMedico
         }
         public void AtualizarDataGridView()
         {
+            alergias = alergias.OrderBy(p => p._Alergias).ToList();
+
             this.viewAlergias.DataSource = null;
             this.viewAlergias.DataSource = alergias;
             this.viewAlergias.ClearSelection();

@@ -38,3 +38,5 @@ C:\Users\Main\Desktop\Trabalhos\Prontuario_Medico\C#(.NET Framework) Project\obj
 C:\Users\Main\Desktop\Estudos C#\Prontuario_Medico\C#(.NET Framework) Project\obj\Debug\ProntuarioMedico.ExamesResultados.resources
 C:\Users\Main\Desktop\Estudos C#\Prontuario_Medico\C#(.NET Framework) Project\obj\Debug\ProntuarioMedico.Vacinas.resources
 C:\Users\Main\Desktop\Estudos C#\Prontuario_Medico\C#(.NET Framework) Project\obj\Debug\ProntuarioMedico.formAlergias.resources
+C:\Users\Main\Desktop\Trabalhos\Prontuario_Medico\C#(.NET Framework) Project\obj\Debug\ProntuarioMedico.formAlergias.resources
+C:\Users\Main\Desktop\Trabalhos\Prontuario_Medico\C#(.NET Framework) Project\obj\Debug\ProntuarioMedico.Vacinas.resources
